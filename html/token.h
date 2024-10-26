@@ -58,6 +58,7 @@ void create_doctype_token();
 void create_attribute();
 void create_tag_token();
 void create_comment_or_character();
+void create_eof_token();
 
 
 #endif
