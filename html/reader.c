@@ -14,7 +14,7 @@ unsigned int current_char_input;
 unsigned int next_char_input;
 
 // Cursor for iterating through the buffer
-unsigned char *cursor = NULL;
+static unsigned char *cursor = NULL;
 unsigned char *end = NULL;
 
 unsigned int decode_utf8(const unsigned char *cursor, int *char_size)
@@ -87,7 +87,7 @@ int temp_buffer(const char *filename)
     return 0;
 }
 
-unsigned int codepoint()
+unsigned int next_code_point()
 {
     while (cursor < end)
     {
